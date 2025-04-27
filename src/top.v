@@ -18,10 +18,10 @@ module top
   IBUF i0 ( .I( clk          ), .O( clk_100m_loc  ) );
   BUFG i1 ( .I( clk_100m_loc ), .O( clk_100m_tree ) );
 
-  FDSE u0 ( .S(0), .CE(pulse_1hz), .C( clk_100m_tree ), .D( u3_q ), .Q( u0_q ) );
-  FDRE u1 ( .R(0), .CE(pulse_1hz), .C( clk_100m_tree ), .D( u0_q ), .Q( u1_q ) );
-  FDRE u2 ( .R(0), .CE(pulse_1hz), .C( clk_100m_tree ), .D( u1_q ), .Q( u2_q ) );
-  FDRE u3 ( .R(0), .CE(pulse_1hz), .C( clk_100m_tree ), .D( u2_q ), .Q( u3_q ) );
+  FDSE u0 ( .S(0), .CE(1), .C( clk_100m_tree ), .D( u3_q ), .Q( u0_q ) );
+  FDRE u1 ( .R(0), .CE(1), .C( clk_100m_tree ), .D( u0_q ), .Q( u1_q ) );
+  FDRE u2 ( .R(0), .CE(1), .C( clk_100m_tree ), .D( u1_q ), .Q( u2_q ) );
+  FDRE u3 ( .R(0), .CE(1), .C( clk_100m_tree ), .D( u2_q ), .Q( u3_q ) );
 
   OBUF j0 ( .I( u0_q ), .O( led[0] ) );
   OBUF j1 ( .I( u1_q ), .O( led[1] ) );

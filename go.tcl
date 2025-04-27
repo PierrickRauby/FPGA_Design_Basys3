@@ -3,7 +3,7 @@ set device xc7a35tcpg236-1
 set_part $device
 
 #Read in source files
-source toptrl_list.tcl
+source top_rtl_list.tcl
 
 #Synthesize, Place and Route the design
 read_xdc ./${design_name}_timing.xdc
