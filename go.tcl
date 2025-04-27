@@ -15,7 +15,7 @@ route_design
 # Report
 set rep_dir ./reports
 file mkdir $rep_dir
-check_timing -fle $rep_dir/post_route_timing_check.rpt
+check_timing -file $rep_dir/post_route_timing_check.rpt
 report_timing_summary -file $rep_dir/post_route_timing_summary.rpt
 report_clock_utilization -file $rep_dir/post_route_clock_util.rpt
 report_utilization -file $rep_dir/post_route_util.rpt
