@@ -56,3 +56,5 @@ dkms.conf
 *.log
 *.rpt
 *.bit
+*.str
+*.lpr
