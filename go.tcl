@@ -24,6 +24,13 @@ report_io -file $rep_dir/post_route_io.rpt
 #Make bitstream file
 
 write_bitstream -force ${design_name}.bit
+
+
+#Program the FPGA
+source ./program_fpga.tcl
+
+
+
 exit
 
 
